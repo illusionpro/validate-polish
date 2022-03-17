@@ -1,6 +1,6 @@
 <?php
 
-namespace Illusionpro\Validator;
+namespace Illusionpro\ValidatePolish;
 
 class Dictionary
 {
