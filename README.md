@@ -9,6 +9,8 @@ EN :This package contains validatiors of data used in Poland (PESEL, NIP, REGON 
 
 **Dostępne walidatory / Available validators**:
 - [x] Walidacja Pesel
+- [ ] Walidacja NIP (wkrótce)
+- [ ] Walidacja REGON (wkrótce)
 
 ***Usage***:
 ```php
@@ -32,7 +34,8 @@ array(5) {
 
 **Dostępne są również dodatkowe dane słownikowe**:  
 - [x] Województwa
-- [ ] Oddziały NFZ  
+- [ ] Oddziały NFZ (wkrótce) 
+- [ ] Lista powiatów wg. województw (wkrótce)
 
 ***Usage***:
 ```php
