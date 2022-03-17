@@ -5,7 +5,12 @@
 ![](https://img.shields.io/packagist/dt/illusionpro/validator.svg?label=packagist%20downloads)
 
 PL: Ten pakiet zawiera walidatory danych używanych w Polsce (PESEL, NIP, REGON etc.)  
-EN :This package contains validatiors of data used in Poland (PESEL, NIP, REGON etc.)
+EN :This package contains validatiors of data used in Poland (PESEL, NIP, REGON etc.)  
+
+### Instalacja
+```
+composer require illusionpro/validate-polish
+```  
 
 **Dostępne walidatory / Available validators**:
 - [x] Walidacja Pesel
@@ -14,6 +19,8 @@ EN :This package contains validatiors of data used in Poland (PESEL, NIP, REGON 
 
 ***Usage***:
 ```php
+use Illusionpro\ValidatePolish\Pesel;  
+
 $pesel = new Pesel($peselNumber);
 $pesel->validate()
 ```
