@@ -1,0 +1,21 @@
+{
+  "name": "illusionpro/validator",
+  "description": "Poprawność i walidacja różnego typu danych. PESEL",
+  "keywords": ["pesel", "walidacja"],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "illusionpro",
+      "email": "tmsoft.gocloud@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+        "Illusionpro\\Validator\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.3|^7.4|^8.0"
+  }
+}
