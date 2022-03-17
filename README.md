@@ -7,7 +7,7 @@
 PL: Ten pakiet zawiera walidatory danych używanych w Polsce (PESEL, NIP, REGON etc.)  
 EN :This package contains validatiors of data used in Poland (PESEL, NIP, REGON etc.)  
 
-### Instalacja
+### Install
 ```
 composer require illusionpro/validate-polish
 ```  
@@ -46,6 +46,8 @@ array(5) {
 
 ***Usage***:
 ```php
+use Illusionpro\ValidatePolish\Dictionary;  
+
 $provinces = Dictionary::getProvinces(); // Dla listy wojwództw
 $province = Dictionary::getProvince($key); // Dla uzyskania konkretnego województwa na podstawie klucza z tablicy 
 ```
