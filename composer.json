@@ -1,7 +1,7 @@
 {
   "name": "illusionpro/validator",
-  "description": "Poprawność i walidacja różnego typu danych. PESEL",
-  "keywords": ["pesel", "walidacja"],
+  "description": "Walidacja danych: PESEL . Dane słownikowe: Lista województw. Przeznaczone do specificznych polskich danych.",
+  "keywords": ["pesel", "walidacja", "województwa"],
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
