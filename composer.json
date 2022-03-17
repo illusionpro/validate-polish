@@ -1,5 +1,5 @@
 {
-  "name": "illusionpro/validator",
+  "name": "illusionpro/validate-polish",
   "description": "Walidacja danych: PESEL . Dane słownikowe: Lista województw. Przeznaczone do specificznych polskich danych.",
   "keywords": ["pesel", "walidacja", "województwa"],
   "minimum-stability": "stable",
@@ -12,7 +12,7 @@
   ],
   "autoload": {
     "psr-4": {
-        "Illusionpro\\Validator\\": "src/"
+        "Illusionpro\\ValidatePolish\\": "src/"
     }
   },
   "require": {
