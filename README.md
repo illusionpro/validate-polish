@@ -4,7 +4,7 @@
 ![](https://img.shields.io/github/release/illusionpro/validator.svg)
 ![](https://img.shields.io/packagist/dt/illusionpro/validator.svg?label=packagist%20downloads)
 
-PL: Ten pakiet zawiera walidatory danych używanych w Polsce (PESEL, NIP, REGON etc.)
+PL: Ten pakiet zawiera walidatory danych używanych w Polsce (PESEL, NIP, REGON etc.)  
 EN :This package contains validatiors of data used in Poland (PESEL, NIP, REGON etc.)
 
 **Dostępne walidatory / Available validators**:
@@ -28,4 +28,14 @@ array(5) {
   ["error"]=> bool(false)
   ["errorMessage"]=> NULL
 }
+```  
+
+**Dostępne są również dodatkowe dane słownikowe**:  
+- [x] Województwa
+- [ ] Oddziały NFZ  
+
+***Usage***:
+```php
+$provinces = Dictionary::getProvinces(); // Dla listy wojwództw
+$province = Dictionary::getProvince($key); // Dla uzyskania konkretnego województwa na podstawie klucza z tablicy 
 ```
