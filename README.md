@@ -14,15 +14,14 @@ composer require illusionpro/validate-polish
 
 **Dostępne walidatory / Available validators**:
 
-<br/>:white_check_mark: Walidacja Pesel
+:white_check_mark: Walidacja Pesel
 <br/>:white_check_mark: Walidacja NIP
-<br/>TODO:
+<br/><br/>TODO:
 <br/>:black_square_button: Walidacja REGON
 
 ### Walidacja PESEL
 
-<br/>Walidator:
-
+Walidator:
 <br/>:heavy_check_mark: Sprawdza czy PESEL zawiera 11 znaków i tylko cyfry
 <br/>:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu
 
@@ -77,10 +76,8 @@ array(5) {
 ```  
 
 **Dostępne są również dodatkowe dane słownikowe**:  
-<br/>:white_check_mark: Województwa
-<br/>TODO:
-<br/>:heavy_check_mark: Oddziały NFZ (wkrótce) 
-<br/>:heavy_check_mark: Lista powiatów wg. województw (wkrótce)
+
+<br/>:heavy_check_mark: Województwa
 
 ***Usage***:
 ```php
