@@ -22,6 +22,7 @@ composer require illusionpro/validate-polish
 ***Walidator***
 <br/>:heavy_check_mark: Sprawdza czy PESEL zawiera 11 znaków i tylko cyfry
 <br/>:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu
+
 ***Dodatkowo zwraca***
 <br/>:heavy_check_mark: Datę urodzenia
 <br/>:heavy_check_mark: Płeć
@@ -50,8 +51,8 @@ array(5) {
 
 ### Walidacja NIP  
 
-Walidator:
-<br/>:heavy_check_mark: Oczyszcza string ze spacji i myślników, dzięki czemu input może być w różnych formatach<br/>(5260251109, 526-025-11-09, 52 60 25 11 09)
+***Walidator***
+<br/>:heavy_check_mark: Oczyszcza string ze spacji i myślników, dzięki czemu input może zawierać różne formatowanie<br/>(5260251109, 526-025-11-09, 52 60 25 11 09).
 <br/>:heavy_check_mark: Sprawdza czy NIP zawiera 10 znaków i tylko cyfry.
 <br/>:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu.
 
@@ -59,7 +60,7 @@ Walidator:
 ```php
 use Illusionpro\ValidatePolish\Nip;  
 
-$nip = new Pesel('526-025-11-09');
+$nip = new NIP('526-025-11-09');
 $nip->validate()
 ```
 ***Result***:
