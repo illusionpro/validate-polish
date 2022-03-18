@@ -5,7 +5,7 @@
 ![](https://img.shields.io/packagist/dt/illusionpro/validator.svg?label=packagist%20downloads)
 
 PL: Ten pakiet zawiera walidatory danych używanych w Polsce (PESEL, NIP, REGON etc.)  
-EN :This package contains validatiors of data used in Poland (PESEL, NIP, REGON etc.)  
+EN :This package contains validators of data used in Poland (PESEL, NIP, REGON etc.)  
 
 ### Install
 ```
@@ -20,8 +20,8 @@ composer require illusionpro/validate-polish
 ### Walidacja PESEL
 
 ***Walidator***
-<br/>:heavy_check_mark: Sprawdza czy PESEL zawiera 11 znaków i tylko cyfry
-<br/>:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu
+<br/>:heavy_check_mark: Checks if PESEL contains 11 digits and no characters
+<br/>:heavy_check_mark: Checks the control sum using the official algorithm
 
 ***Dodatkowo zwraca***
 <br/>:heavy_check_mark: Datę urodzenia
