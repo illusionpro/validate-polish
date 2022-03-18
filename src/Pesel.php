@@ -10,7 +10,7 @@ class Pesel
 
     public function __construct($pesel)
     {
-        $this->pesel = trim(str_replace(['-', ' '], '', $pesel));
+        $this->pesel = trim($pesel);
     }
 
     protected function validateLength(): bool
@@ -31,7 +31,7 @@ class Pesel
         $this->day = substr($this->pesel, 4, 2);
         $this->year = substr($this->pesel, 0, 2);
         $this->gender = $this->setGender(substr($this->pesel, 9, 1));
-        
+
         return true;
     }
 

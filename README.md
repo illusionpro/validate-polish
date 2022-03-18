@@ -39,6 +39,7 @@ $pesel->validate()
 array(5) {
   ["isValid"]=> bool(true)
   ["gender"]=> string(1) "M"
+  ["pesel"]=> string(11) "00112233445"
   ["birthDate"]=>  array(3) {
         ["year"]=> string(4) "1980"
         ["month"]=> string(2) "12"
