@@ -13,6 +13,7 @@ composer require illusionpro/validate-polish
 ```  
 
 **Dostępne walidatory / Available validators**:
+
 <br/>:white_check_mark: Walidacja Pesel
 <br/>:white_check_mark: Walidacja NIP
 <br/>TODO:
@@ -21,6 +22,7 @@ composer require illusionpro/validate-polish
 ### Walidacja PESEL
 
 <br/>Walidator:
+
 <br/>:heavy_check_mark: Sprawdza czy PESEL zawiera 11 znaków i tylko cyfry
 <br/>:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu
 
