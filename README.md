@@ -44,7 +44,7 @@ array(5) {
 ### Walidacja NIP  
 
 Walidator:
-- Oczyszcza string ze spacji i myślników, dzięki czemu input może być w różnych formatach (5260251109, 526-025-11-09, 52 60 25 11 09)
+- Oczyszcza string ze spacji i myślników, dzięki czemu input może być w różnych formatach   (5260251109, 526-025-11-09, 52 60 25 11 09)
 - Sprawdza czy NIP zawiera 10 znaków i tylko cyfry
 - Sprawdza sume kontrolnę wg. oficjalnego algorytmu
 
