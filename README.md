@@ -85,3 +85,22 @@ use Illusionpro\ValidatePolish\Dictionary;
 $provinces = Dictionary::getProvinces(); // Dla listy wojwództw
 $province = Dictionary::getProvince($key); // Dla uzyskania konkretnego województwa na podstawie klucza z tablicy 
 ```
+
+:heavy_check_mark: Lista NFZ z kodem
+
+***Usage***:
+```php
+use Illusionpro\ValidatePolish\Dictionary;  
+
+$nfzList = Dictionary::getNfzList(); // Dla listy wojwództw
+$singleNfz = Dictionary::getNfz($key); // Dla uzyskania konkretnego województwa na podstawie klucza z tablicy 
+```
+
+***Result single***:
+```php
+Array
+(
+    [code] => 11
+    [name] => Pomorski Oddział Narodowego Funduszu Zdrowia w Gdańsku.
+)
+```
