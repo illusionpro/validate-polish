@@ -60,7 +60,7 @@ array(5) {
 ```php
 use Illusionpro\ValidatePolish\Nip;  
 
-$nip = new NIP('526-025-11-09');
+$nip = new Nip('526-025-11-09');
 $nip->validate()
 ```
 ***Result***:

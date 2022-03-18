@@ -10,11 +10,7 @@ class Pesel
 
     public function __construct($pesel)
     {
-        $this->pesel = $pesel;
-        $this->month = substr($pesel, 2, 2);
-        $this->day = substr($pesel, 4, 2);
-        $this->year = substr($pesel, 0, 2);
-        $this->gender = $this->setGender(substr($pesel, 9, 1));
+        $this->pesel = trim(str_replace(['-', ' '], '', $pesel));
     }
 
     protected function validateLength(): bool
@@ -27,9 +23,15 @@ class Pesel
 
     protected function validateDigits()
     {
-        if (ctype_digit($this->nip) === false) {
+        if (ctype_digit($this->pesel) === false) {
             throw new \Exception('Numer PESEL powinien zawierać same cyfry');
         }
+
+        $this->month = substr($this->pesel, 2, 2);
+        $this->day = substr($this->pesel, 4, 2);
+        $this->year = substr($this->pesel, 0, 2);
+        $this->gender = $this->setGender(substr($this->pesel, 9, 1));
+        
         return true;
     }
 
@@ -64,11 +66,9 @@ class Pesel
 
         $checkNumber = 10 - $sum % 10;
         $checkSum = ($checkNumber == 10) ? 0 : $checkNumber;
-
         if ($checkSum != $this->pesel[10]) {
             throw new \Exception('Błąd numeru PESEL');
         }
-
         return true;
     }
 
@@ -77,7 +77,6 @@ class Pesel
         try {
             $this->isValid = ($this->validateLength() && $this->validateDigits() && $this->setMonthAndCentury() && $this->validateChecksumn());
             return $this->getResponse();
-
         } catch (\Exception $e) {
             return $this->getResponse(true, $e->getMessage());
         }
@@ -88,7 +87,7 @@ class Pesel
         return [
             'isValid' => $this->isValid,
             'gender' => $this->gender,
-
+            'pesel' => $this->pesel,
             'birthDate' => [
                 'year' => $this->century . $this->year,
                 'month' => $this->month,

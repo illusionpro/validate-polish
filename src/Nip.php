@@ -16,7 +16,7 @@ class Nip
     protected function validateDigits()
     {
         if (ctype_digit($this->nip) === false) {
-            throw new \Exception('Numer NIP powinien zAWIERać same cyfry');
+            throw new \Exception('Numer NIP powinien zawierać same cyfry');
         }
 
         return true;
