@@ -6,7 +6,7 @@ class Pesel
 {
     protected static $length = 11;
     protected $isValid = false;
-    protected $pesel, $year, $month, $day, $age, $gender, $century;
+    protected $pesel, $year, $month, $day, $gender, $century;
 
     public function __construct($pesel)
     {
@@ -17,10 +17,18 @@ class Pesel
         $this->gender = $this->setGender(substr($pesel, 9, 1));
     }
 
-    protected function checkLength(): bool
+    protected function validateLength(): bool
     {
         if (strlen($this->pesel) !== self::$length) {
             throw  new \Exception('Nieprawidłowa długość numeru PESEL');
+        }
+        return true;
+    }
+
+    protected function validateDigits()
+    {
+        if (ctype_digit($this->nip) === false) {
+            throw new \Exception('Numer PESEL powinien zawierać same cyfry');
         }
         return true;
     }
@@ -67,7 +75,7 @@ class Pesel
     public function validate(): array
     {
         try {
-            $this->isValid = ($this->checkLength() && $this->setMonthAndCentury() && $this->validateChecksumn());
+            $this->isValid = ($this->validateLength() && $this->validateDigits() && $this->setMonthAndCentury() && $this->validateChecksumn());
             return $this->getResponse();
 
         } catch (\Exception $e) {
