@@ -1,13 +1,13 @@
-# Validation of Poland specific data
+# Walidacja specyficznych danych dla polskiego regionu
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![](https://img.shields.io/github/release/illusionpro/validator.svg)
 ![](https://img.shields.io/packagist/dt/illusionpro/validator.svg?label=packagist%20downloads)
 
-#[Polish Version here](README_PL.md)#
-
 PL: Ten pakiet zawiera walidatory danych używanych w Polsce (PESEL, NIP, REGON etc.)  
-EN :This package contains validators of data used in Poland (PESEL, NIP, REGON etc.)  
+EN :This package contains validatiors of data used in Poland (PESEL, NIP, REGON etc.) 
+
+#[English Version here](README.md)#
 
 ### Install
 ```
@@ -16,18 +16,18 @@ composer require illusionpro/validate-polish
 
 **Dostępne walidatory / Available validators**:
 
-:white_check_mark: Pesel Validation
-<br/>:white_check_mark: NIP Validation
+:white_check_mark: Walidacja Pesel
+<br/>:white_check_mark: Walidacja NIP
 
-### PESEL Validation
+### Walidacja PESEL
 
 ***Walidator***
-<br/>:heavy_check_mark: Checks if PESEL contains 11 digits and no characters
-<br/>:heavy_check_mark: Checks the control sum using the official algorithm
+<br/>:heavy_check_mark: Sprawdza czy PESEL zawiera 11 znaków i tylko cyfry
+<br/>:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu
 
 ***Dodatkowo zwraca***
-<br/>:heavy_check_mark: Date of birth
-<br/>:heavy_check_mark: Gender
+<br/>:heavy_check_mark: Datę urodzenia
+<br/>:heavy_check_mark: Płeć
 
 ***Usage***:
 ```php
@@ -52,12 +52,12 @@ array(5) {
 }
 ```  
 
-### NIP Validation  
+### Walidacja NIP  
 
-***Validator***
-<br/>:heavy_check_mark: Removes comas and dashes from the string. This enables different formatting styles.<br/>(5260251109, 526-025-11-09, 52 60 25 11 09).
-<br/>:heavy_check_mark: Verifies if NIP consists of 10 digits. 
-<br/>:heavy_check_mark: Checks the control sum using the official algorithm.
+***Walidator***
+<br/>:heavy_check_mark: Oczyszcza string ze spacji i myślników, dzięki czemu input może zawierać różne formatowanie<br/>(5260251109, 526-025-11-09, 52 60 25 11 09).
+<br/>:heavy_check_mark: Sprawdza czy NIP zawiera 10 znaków i tylko cyfry.
+<br/>:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu.
 
 ***Usage***:
 ```php
@@ -76,26 +76,26 @@ array(5) {
 }
 ```  
 
-**There are also other dictionary options available**:  
+**Dostępne są również dodatkowe dane słownikowe**:  
 
-:heavy_check_mark: Voivodship
+:heavy_check_mark: Województwa
 
 ***Usage***:
 ```php
 use Illusionpro\ValidatePolish\Dictionary;  
 
-$provinces = Dictionary::getProvinces(); // for voivodship list
-$province = Dictionary::getProvince($key); // to retrieve a specific voivodship based on the key from the list
+$provinces = Dictionary::getProvinces(); // Dla listy wojwództw
+$province = Dictionary::getProvince($key); // Dla uzyskania konkretnego województwa na podstawie klucza z tablicy 
 ```
 
-:heavy_check_mark: NFZ list with code
+:heavy_check_mark: Lista NFZ z kodem
 
 ***Usage***:
 ```php
 use Illusionpro\ValidatePolish\Dictionary;  
 
-$nfzList = Dictionary::getNfzList(); // to list NFZ branches
-$singleNfz = Dictionary::getNfz($key); // to retrieve a specific NFZ branch
+$nfzList = Dictionary::getNfzList(); // Dla listy oddziałów BFZ
+$singleNfz = Dictionary::getNfz($key); // Dla uzyskania konkretnego oddziału NFZ 
 ```
 
 ***Result single***:
@@ -103,6 +103,6 @@ $singleNfz = Dictionary::getNfz($key); // to retrieve a specific NFZ branch
 Array
 (
     [code] => 11
-    [name] => Pomeranian branch of NFZ
+    [name] => Pomorski Oddział Narodowego Funduszu Zdrowia w Gdańsku.
 )
 ```
