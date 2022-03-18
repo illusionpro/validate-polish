@@ -13,18 +13,19 @@ composer require illusionpro/validate-polish
 ```  
 
 **Dostępne walidatory / Available validators**:
-- :white_check_mark: Walidacja Pesel
-- :white_check_mark: Walidacja NIP
+ :white_check_mark: Walidacja Pesel
+ :white_check_mark: Walidacja NIP
+ :black_square_button: Walidacja REGON
 
 ### Walidacja PESEL
 
 Walidator:
-- Sprawdza czy PESEL zawiera 11 znaków i tylko cyfry
-- Sprawdza sume kontrolnę wg. oficjalnego algorytmu
+:heavy_check_mark: Sprawdza czy PESEL zawiera 11 znaków i tylko cyfry
+:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu
 
 Dodatkowo zwraca:
-- Datę urodzenia
-- Płeć
+:heavy_check_mark: Datę urodzenia
+:heavy_check_mark: Płeć
 
 ***Usage***:
 ```php
@@ -51,9 +52,9 @@ array(5) {
 ### Walidacja NIP  
 
 Walidator:
-- Oczyszcza string ze spacji i myślników, dzięki czemu input może być w różnych formatach<br/>(5260251109, 526-025-11-09, 52 60 25 11 09)
-- Sprawdza czy NIP zawiera 10 znaków i tylko cyfry
-- Sprawdza sume kontrolnę wg. oficjalnego algorytmu
+:heavy_check_mark: Oczyszcza string ze spacji i myślników, dzięki czemu input może być w różnych formatach<br/>(5260251109, 526-025-11-09, 52 60 25 11 09)
+:heavy_check_mark: Sprawdza czy NIP zawiera 10 znaków i tylko cyfry.
+:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu.
 
 ***Usage***:
 ```php
