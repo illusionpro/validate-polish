@@ -1,4 +1,4 @@
-# Walidacja specyficznych danych dla polskiego regionu
+# Validation of Poland specific data
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![](https://img.shields.io/github/release/illusionpro/validator.svg)
@@ -14,18 +14,18 @@ composer require illusionpro/validate-polish
 
 **Dostępne walidatory / Available validators**:
 
-:white_check_mark: Walidacja Pesel
-<br/>:white_check_mark: Walidacja NIP
+:white_check_mark: Pesel Validation
+<br/>:white_check_mark: NIP Validation
 
-### Walidacja PESEL
+### PESEL Validation
 
 ***Walidator***
 <br/>:heavy_check_mark: Checks if PESEL contains 11 digits and no characters
 <br/>:heavy_check_mark: Checks the control sum using the official algorithm
 
 ***Dodatkowo zwraca***
-<br/>:heavy_check_mark: Datę urodzenia
-<br/>:heavy_check_mark: Płeć
+<br/>:heavy_check_mark: Date of birth
+<br/>:heavy_check_mark: Gender
 
 ***Usage***:
 ```php
@@ -50,7 +50,7 @@ array(5) {
 }
 ```  
 
-### Walidacja NIP  
+### NIP Validation  
 
 ***Validator***
 <br/>:heavy_check_mark: Removes comas and dashes from the string. This enables different formatting styles.<br/>(5260251109, 526-025-11-09, 52 60 25 11 09).
@@ -74,26 +74,26 @@ array(5) {
 }
 ```  
 
-**Dostępne są również dodatkowe dane słownikowe**:  
+**There are also other dictionary options available**:  
 
-:heavy_check_mark: Województwa
+:heavy_check_mark: Voivodship
 
 ***Usage***:
 ```php
 use Illusionpro\ValidatePolish\Dictionary;  
 
-$provinces = Dictionary::getProvinces(); // Dla listy wojwództw
-$province = Dictionary::getProvince($key); // Dla uzyskania konkretnego województwa na podstawie klucza z tablicy 
+$provinces = Dictionary::getProvinces(); // for voivodship list
+$province = Dictionary::getProvince($key); // to retrieve a specific voivodship based on the key from the list
 ```
 
-:heavy_check_mark: Lista NFZ z kodem
+:heavy_check_mark: NFZ list with code
 
 ***Usage***:
 ```php
 use Illusionpro\ValidatePolish\Dictionary;  
 
-$nfzList = Dictionary::getNfzList(); // Dla listy oddziałów BFZ
-$singleNfz = Dictionary::getNfz($key); // Dla uzyskania konkretnego oddziału NFZ 
+$nfzList = Dictionary::getNfzList(); // to list NFZ branches
+$singleNfz = Dictionary::getNfz($key); // to retrieve a specific NFZ branch
 ```
 
 ***Result single***:
@@ -101,6 +101,6 @@ $singleNfz = Dictionary::getNfz($key); // Dla uzyskania konkretnego oddziału NF
 Array
 (
     [code] => 11
-    [name] => Pomorski Oddział Narodowego Funduszu Zdrowia w Gdańsku.
+    [name] => Pomeranian branch of NFZ
 )
 ```
