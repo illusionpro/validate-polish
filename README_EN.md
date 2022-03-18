@@ -52,10 +52,10 @@ array(5) {
 
 ### Walidacja NIP  
 
-***Walidator***
-<br/>:heavy_check_mark: Oczyszcza string ze spacji i myślników, dzięki czemu input może zawierać różne formatowanie<br/>(5260251109, 526-025-11-09, 52 60 25 11 09).
-<br/>:heavy_check_mark: Sprawdza czy NIP zawiera 10 znaków i tylko cyfry.
-<br/>:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu.
+***Validator***
+<br/>:heavy_check_mark: Removes comas and dashes from the string. This enables different formatting styles.<br/>(5260251109, 526-025-11-09, 52 60 25 11 09).
+<br/>:heavy_check_mark: Verifies if NIP consists of 10 digits. 
+<br/>:heavy_check_mark: Checks the control sum using the official algorithm.
 
 ***Usage***:
 ```php
