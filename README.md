@@ -92,12 +92,12 @@ $province = Dictionary::getProvince($key); // Dla uzyskania konkretnego wojewód
 ```php
 use Illusionpro\ValidatePolish\Dictionary;  
 
-$nfzList = Dictionary::getNfzList(); // Dla listy wojwództw
-$singleNfz = Dictionary::getNfz($key); // Dla uzyskania konkretnego województwa na podstawie klucza z tablicy 
+$nfzList = Dictionary::getNfzList(); // Dla listy oddziałów BFZ
+$singleNfz = Dictionary::getNfz($key); // Dla uzyskania konkretnego oddziału NFZ 
 ```
 
 ***Result single***:
-```php
+```
 Array
 (
     [code] => 11
