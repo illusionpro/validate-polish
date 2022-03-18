@@ -14,8 +14,10 @@ composer require illusionpro/validate-polish
 
 **Dostępne walidatory / Available validators**:
 - [x] Walidacja Pesel
-- [ ] Walidacja NIP (wkrótce)
+- [X] Walidacja NIP (wkrótce)
 - [ ] Walidacja REGON (wkrótce)
+
+### Walidacja PESEL
 
 ***Usage***:
 ```php
@@ -34,6 +36,30 @@ array(5) {
         ["month"]=> string(2) "12"
         ["day"]=> string(2) "30"
     }
+  ["error"]=> bool(false)
+  ["errorMessage"]=> NULL
+}
+```  
+
+### Walidacja NIP  
+
+Walidator:
+- Oczyszcza string ze spacji i myślników, dzięki czemu input może być w różnych formatach (5260251109, 526-025-11-09, 52 60 25 11 09)
+- Sprawdza czy NIP zawiera 10 znaków i tylko cyfry
+- Sprawdza sume kontrolnę wg. oficjalnego algorytmu
+
+***Usage***:
+```php
+use Illusionpro\ValidatePolish\Nip;  
+
+$nip = new Pesel('526-025-11-09');
+$nip->validate()
+```
+***Result***:
+```php
+array(5) {
+  ["isValid"]=> bool(true)
+  ["nip"]=> string(10) "5260251109"
   ["error"]=> bool(false)
   ["errorMessage"]=> NULL
 }
