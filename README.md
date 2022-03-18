@@ -24,7 +24,6 @@ composer require illusionpro/validate-polish
 Walidator:
 <br/>:heavy_check_mark: Sprawdza czy PESEL zawiera 11 znaków i tylko cyfry
 <br/>:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu
-
 <br/>Dodatkowo zwraca:
 <br/>:heavy_check_mark: Datę urodzenia
 <br/>:heavy_check_mark: Płeć
@@ -77,7 +76,7 @@ array(5) {
 
 **Dostępne są również dodatkowe dane słownikowe**:  
 
-<br/>:heavy_check_mark: Województwa
+:heavy_check_mark: Województwa
 
 ***Usage***:
 ```php
