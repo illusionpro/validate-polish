@@ -16,15 +16,13 @@ composer require illusionpro/validate-polish
 
 :white_check_mark: Walidacja Pesel
 <br/>:white_check_mark: Walidacja NIP
-<br/><br/>TODO:
-<br/>:black_square_button: Walidacja REGON
 
 ### Walidacja PESEL
 
-Walidator:
+***Walidator***
 <br/>:heavy_check_mark: Sprawdza czy PESEL zawiera 11 znaków i tylko cyfry
 <br/>:heavy_check_mark: Sprawdza sume kontrolnę wg. oficjalnego algorytmu
-<br/>Dodatkowo zwraca:
+***Dodatkowo zwraca***
 <br/>:heavy_check_mark: Datę urodzenia
 <br/>:heavy_check_mark: Płeć
 
